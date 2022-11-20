@@ -22,6 +22,6 @@ public class ProductService {
         log.info("ProductService::getAllProducts() started");
         List<Product> productList = productRepository.findAll();
         log.info("ProductService::getAllProducts() finished");
-        return productMapper.mapToProductResponseDTO(productList);
+        return productMapper.mapToProductResponseDTOList(productList);
     }
 }

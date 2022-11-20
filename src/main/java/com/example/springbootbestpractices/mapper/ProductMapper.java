@@ -1,6 +1,5 @@
 package com.example.springbootbestpractices.mapper;
 
-import com.example.springbootbestpractices.dto.ProductRequestDTO;
 import com.example.springbootbestpractices.dto.ProductResponseDTO;
 import com.example.springbootbestpractices.entity.Product;
 import org.springframework.stereotype.Component;
@@ -11,7 +10,7 @@ import java.util.stream.Collectors;
 @Component
 public class ProductMapper {
 
-    public List<ProductResponseDTO> mapToProductResponseDTO(List<Product> productList) {
+    public List<ProductResponseDTO> mapToProductResponseDTOList(List<Product> productList) {
 
         return productList.stream()
                 .map(this::mapToProduct)
